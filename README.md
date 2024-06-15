@@ -30,8 +30,27 @@ With "modern" I especially mean your device need to suppor the following technol
 
 You can start right now by just including the main CSS directly in your HTML:
 
+```html
+<html>
+<head>
+  <!-- Link the newest version: -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bylexus/alexich-css/alexich_css.css">
+  <!-- or link a specific version: -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bylexus/alexich-css@1.2.3/alexich_css.css">
 
-> // TODO
+  <!-- import needed web components -->
+  <script type="module" src="https://cdn.jsdelivr.net/gh/bylexus/alexich-css/components/progress-bar.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1>Hello, alexi.ch css!</h1>
+		<progress-bar value="20" max="100" appearance="full">ready!</progress-bar>
+	</div>
+</body>
+</html>
+```
+
+Check the  [full documentation](./doc/) for more details.
 
 
 (c) 2024 [alexi.ch](https://alexi.ch)

@@ -1,0 +1,13 @@
+body {
+	max-width: unset;
+}
+header {
+	text-align: unset;
+	margin-bottom: unset;
+}
+footer a {
+	color: var(--color-light);
+}
+footer a:visited {
+	color: var(--color-light);
+}

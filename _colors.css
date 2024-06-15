@@ -421,6 +421,14 @@
   --color-dark: #000;
 }
 
+.color-light {
+  color: var(--color-light);
+}
+
+.color-dark {
+  color: var(--color-dark);
+}
+
 .color-red-950 {
   color: var(--color-red-950);
 }

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>alexich-css Documentation – alexich-css Documentation</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    body {
+    	max-width: unset;
+    }
+    header {
+    	text-align: unset;
+    	margin-bottom: unset;
+    }
+    footer a {
+    	color: var(--color-light);
+    }
+    footer a:visited {
+    	color: var(--color-light);
+    }  </style>
+  <link rel="stylesheet" href="../alexich_css.css" />
+</head>
+<body class="h-full overflow-auto">
+	<header class="py-5 px-3 background-indigo-650">
+		<div class="container">
+			<h1 class="mx-0 my-0">alexich-css Documentation</h1>
+		</div>
+	</header>
+	<div class="container row">
+		<nav class="d-none display-lg col-lg-3 sticky-top align-self-start">
+			<h2>Table of contents</h2>
+      <ul>
+      <li><a href="#welcome" id="toc-welcome">Welcome!</a></li>
+      <li><a href="#setup" id="toc-setup">Setup</a>
+      <ul>
+      <li><a href="#self-hosted"
+      id="toc-self-hosted">Self-hosted</a></li>
+      <li><a href="#via-cdn" id="toc-via-cdn">via CDN</a></li>
+      </ul></li>
+      <li><a href="#customization-css-variables"
+      id="toc-customization-css-variables">Customization: CSS
+      variables</a>
+      <ul>
+      <li><a href="#defined-variables"
+      id="toc-defined-variables">defined variables</a></li>
+      </ul></li>
+      <li><a href="#media-breakpoints" id="toc-media-breakpoints">Media
+      breakpoints</a></li>
+      </ul>
+		</nav>
+		<main class="col-12 col-lg-9">
+<h2 id="welcome">Welcome!</h2>
+<p>This is the documentation for the alexich-css library of css
+utilities and Web Components. Please note that this is a loose
+collection of css utility classes, UI component classes and Web
+Components created for my very own use cases, which mainly emerged from
+building <a href="https://alexi.ch">alexi.ch</a>.</p>
+<p>If you find this collection useful, fine, go ahead and use them as
+you like, maybe even <a href="mailto:alex-css@alexi.ch">drop me an
+email</a> with a short note of how it was useful to you.</p>
+<p>I have no intention to make this library a full-featured / complete
+library, nor will I implement your use-cases / wishes.</p>
+<p><strong>This documentation uses a lot of the framework itself, so
+have a look at the source code of this page for
+inspiration.</strong></p>
+<h2 id="setup">Setup</h2>
+<h3 id="self-hosted">Self-hosted</h3>
+<p>It is preferred to host the library by yourself, so that you are
+independant of any external ressources such as a CDN.</p>
+<p>You can download the library from the github repo:</p>
+<p>https://github.com/bylexus/alexich-css/archive/refs/heads/main.zip</p>
+<p>or in the terminal via curl:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> curl <span class="at">-o</span> alexich-css.zip https://github.com/bylexus/alexich-css/archive/refs/heads/main.zip</span></code></pre></div>
+<p>Then, unzip the folder and copy it to your website’s public folder,
+reference the main css file and optionally the web components you intend
+to use, and you’re done:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> charset</span><span class="op">=</span><span class="st">&quot;utf-8&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> name</span><span class="op">=</span><span class="st">&quot;viewport&quot;</span><span class="ot"> content</span><span class="op">=</span><span class="st">&quot;width=device-width, initial-scale=1.0, user-scalable=yes&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> rel</span><span class="op">=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;path/to/alexich-css/alexich_css.css&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="co">&lt;!-- import web components you intend to use --&gt;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> type=</span><span class="st">&quot;module&quot;</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;path/to/alexich-css/components/progress-bar.js&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;container&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>Hello, alexi.ch css!<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">progress-bar</span><span class="ot"> value</span><span class="op">=</span><span class="st">&quot;20&quot;</span><span class="ot"> max</span><span class="op">=</span><span class="st">&quot;100&quot;</span><span class="ot"> appearance</span><span class="op">=</span><span class="st">&quot;full&quot;</span><span class="dt">&gt;</span>ready!<span class="dt">&lt;/</span><span class="kw">progress-bar</span><span class="dt">&gt;</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div>
+<h3 id="via-cdn">via CDN</h3>
+<p>The jsdeliver CDN lets you use the library directly from the github
+repo. Instead of download the library, you can use it via CDN:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> charset</span><span class="op">=</span><span class="st">&quot;utf-8&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> name</span><span class="op">=</span><span class="st">&quot;viewport&quot;</span><span class="ot"> content</span><span class="op">=</span><span class="st">&quot;width=device-width, initial-scale=1.0, user-scalable=yes&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">&lt;!-- Link the newest version: --&gt;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> rel</span><span class="op">=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;https://cdn.jsdelivr.net/gh/bylexus/alexich-css/alexich_css.css&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="co">&lt;!-- or link a specific version: --&gt;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> rel</span><span class="op">=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;https://cdn.jsdelivr.net/gh/bylexus/alexich-css@1.2.3/alexich_css.css&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="co">&lt;!-- import web components you intend to use --&gt;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> type=</span><span class="st">&quot;module&quot;</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;https://cdn.jsdelivr.net/gh/bylexus/alexich-css/components/progress-bar.js&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;container&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>Hello, alexi.ch css!<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">progress-bar</span><span class="ot"> value</span><span class="op">=</span><span class="st">&quot;20&quot;</span><span class="ot"> max</span><span class="op">=</span><span class="st">&quot;100&quot;</span><span class="ot"> appearance</span><span class="op">=</span><span class="st">&quot;full&quot;</span><span class="dt">&gt;</span>ready!<span class="dt">&lt;/</span><span class="kw">progress-bar</span><span class="dt">&gt;</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div>
+<h2 id="customization-css-variables">Customization: CSS variables</h2>
+<p>The library makes heavy use of CSS custom properties, aka
+“variables”. You can override them as needed to make changes to the
+defaults:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="in">:root</span> {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="va">--container-max-width</span><span class="ch">:</span> <span class="dv">800</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h3 id="defined-variables">defined variables</h3>
+<table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 40%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>--container-max-width</code></td>
+<td>sm: <code>unset</code><br>md: <code>960px</code><br>lg:
+<code>1024px</code><br>xl: <code>1280px</code></td>
+<td>Sets the maximum width of the <code>.container</code> element</td>
+</tr>
+<tr class="even">
+<td><code>--grid-gap</code></td>
+<td>sm: <code>8px</code><br>lg: <code>12px</code><br>xl:
+<code>16px</code></td>
+<td>The gap between cols of the grid layout system</td>
+</tr>
+<tr class="odd">
+<td><code>--gap-base</code></td>
+<td>0.25rem</td>
+<td>base size for the <code>gap-*</code> classes (<code>.gap-1</code>
+uses the base value)</td>
+</tr>
+<tr class="even">
+<td><code>--icon-size</code></td>
+<td>1rem</td>
+<td>The standard svg icon size used with the <code>.ic</code> class</td>
+</tr>
+<tr class="odd">
+<td><code>--icon-color</code></td>
+<td>black</td>
+<td>The standard svg icon color used with the <code>.ic</code>
+class</td>
+</tr>
+<tr class="even">
+<td><code>--font-family</code></td>
+<td>sans-serif</td>
+<td>standard document font family</td>
+</tr>
+<tr class="odd">
+<td><code>--font-size</code></td>
+<td>1em</td>
+<td>default body font size</td>
+</tr>
+<tr class="even">
+<td><code>--line-height</code></td>
+<td>1.5em</td>
+<td>default line-height for all elements</td>
+</tr>
+</tbody>
+</table>
+<h2 id="media-breakpoints">Media breakpoints</h2>
+<p>The framework uses a “mobile-first” or “bottom-up” approach. This
+means that the defined breakpoints are applied when the minimim screen
+size is reached. The framework defines the following media
+breakpoints:</p>
+<ul>
+<li>Small screens (sm), e.g. phones: &lt;= 480px</li>
+<li>Medium screens (md), e.g. tablets: &gt; 480px, &lt;= 768px</li>
+<li>Large screens (lg), e.g. laptops: &gt; 768px, &lt;= 1280px</li>
+<li>Very large screens (xl), e.g. big screens: &gt; 1280px</li>
+</ul>
+<p>Unfortunately, media queries do not yet support CSS variables (yet),
+so if you want to use the breakpoint values in media queries, you have
+to duplicate the values:</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Instead of (because not yet possible with CSS): */</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">@media</span> <span class="an">screen</span> <span class="kw">and</span> <span class="fu">(</span><span class="kw">min-width</span><span class="ch">:</span> <span class="fu">var(</span><span class="va">--breakpoint-md</span><span class="fu">))</span> {</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">/* ...... */</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">/* you need to explicitely use the pixel value: */</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">/* medium size screen: */</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="im">@media</span> <span class="an">screen</span> <span class="kw">and</span> <span class="fu">(</span><span class="kw">min-width</span><span class="ch">:</span> <span class="dv">481</span><span class="dt">px</span><span class="fu">)</span> {</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="co">/* ...... */</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+		</main>
+	</div>
+	<footer class="background-blue-800 py-2">
+		<div class="container">
+			&copy; 2024 <a href="https://alexi.ch" class="color-light">alexi.ch</a>
+		</div>
+	</footer>
+</body>
+</html>

@@ -1,5 +1,8 @@
 /** Default: small (sm), Mobile, <= 480px **/
 :root {
+	--breakpoint-md: 481px;
+	--breakpoint-lg: 769px;
+	--breakpoint-xl: 1281px;
 }
 
 /** Tablet: medium (md), > 480px, <= 768px **/

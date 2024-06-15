@@ -3,4 +3,10 @@
     --spacing-base: 0.25rem;
     --spacing-scale: 2;
     --grid-gap: 8px;
+	--gap-base: 0.25rem;
+    --icon-size: 1rem;
+    --icon-color: black;
+    --font-family: sans-serif;
+    --font-size: 1em;
+    --line-height: 1.5em;
 }
