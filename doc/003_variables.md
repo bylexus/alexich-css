@@ -20,5 +20,5 @@ override them as needed to make changes to the defaults:
 | `--icon-size`           | 1rem                                                       | The standard svg icon size used with the `.ic` class             |
 | `--icon-color`          | black                                                      | The standard svg icon color used with the `.ic` class            |
 | `--font-family`         | sans-serif                                                 | standard document font family                                    |
-| `--font-size`         | 1em                                                 | default body font size |
-| `--line-height`         | 1.5em                                                 | default line-height for all elements |
+| `--font-size`           | 1em                                                        | default body font size                                           |
+| `--line-height`         | 1.5                                                        | default line-height for all elements                             |
