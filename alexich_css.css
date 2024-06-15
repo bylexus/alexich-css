@@ -1,0 +1,49 @@
+@import url(_reset.css);
+@import url(_variables.css);
+@import url(_breakpoints.css);
+@import url(_colors.css);
+@import url(_container.css);
+@import url(_spacing.css);
+@import url(_display.css);
+@import url(_grid.css);
+@import url(_flex.css);
+@import url(_icons.css);
+@import url(_styling.css);
+@import url(_card.css);
+@import url(_alignment.css);
+
+body {
+    --font-family-initial: sans-serif;
+    --font-size-initial: 1em;
+    --line-height-initial: 1.5em;
+    font-family: var(--font-family, var(--font-family-initial));
+    font-size: var(--font-size, var(--font-size-initial));
+    line-height: var(--line-height, var(--line-height-initial));
+}
+
+img, video {
+	max-width: 100%;
+}
+
+button {
+    padding: 5px 8px;
+    display: inline-flex;
+    gap: 3px;
+    align-items: center;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: var(--color-grey-400);
+    background-color: var(--color-grey-100);
+    height: 32px;
+    .ic {
+        width: 16px;
+        height: 16px;
+    }
+    &:hover {
+        background-color: var(--color-grey-50);
+    }
+    &:active {
+        background-color: var(--color-grey-150);
+    }
+}

@@ -1,0 +1,101 @@
+.ic {
+    --icon-size-initial: 1rem;
+    --icon-color-initial: black;
+    display: inline-block;
+    width: var(--icon-size, var(--icon-size-initial));
+    height: var(--icon-size, var(--icon-size-initial));
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: var(--icon-color, var(--icon-color-initial));
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    line-height: 1;
+
+    &.ic-v-middle {
+        vertical-align: middle;
+    }
+
+    &.ic-v-baseline {
+        vertical-align: baseline;
+    }
+
+    &.ic-2x {
+        width: calc(var(--icon-size, var(--icon-size-initial)) * 2);
+        height: calc(var(--icon-size, var(--icon-size-initial)) * 2);
+    }
+
+    &.ic-10 {
+        width: 10px;
+        height: 10px;
+    }
+    &.ic-12 {
+        width: 12px;
+        height: 12px;
+    }
+    &.ic-16 {
+        width: 16px;
+        height: 16px;
+    }
+    &.ic-18 {
+        width: 18px;
+        height: 18px;
+    }
+
+    &.ic-20 {
+        width: 20px;
+        height: 20px;
+    }
+    &.ic-22 {
+        width: 22px;
+        height: 22px;
+    }
+
+    &.ic-24 {
+        width: 24px;
+        height: 24px;
+    }
+
+    &.ic-26 {
+        width: 26px;
+        height: 26px;
+    }
+
+    &.ic-28 {
+        width: 28px;
+        height: 28px;
+    }
+
+    &.ic-32 {
+        width: 32px;
+        height: 32px;
+    }
+
+    /** pre-defined icons **/
+    &.ic-star-5 {
+        mask-image: url(icons/star-5.svg);
+    }
+
+    &.ic-heart {
+        mask-image: url(icons/heart.svg);
+    }
+
+    &.ic-bars-horiz {
+        mask-image: url(icons/3-bars-horiz.svg);
+    }
+
+    &.ic-arrow-right-round-filled {
+        mask-image: url(icons/arrow-right-round-filled.svg);
+    }
+    &.ic-arrow-up-round-filled {
+        mask-image: url(icons/arrow-right-round-filled.svg);
+		transform: rotate(-90deg);
+    }
+    &.ic-arrow-left-round-filled {
+        mask-image: url(icons/arrow-right-round-filled.svg);
+		transform: rotate(-180deg);
+    }
+    &.ic-arrow-down-round-filled {
+        mask-image: url(icons/arrow-right-round-filled.svg);
+		transform: rotate(90deg);
+    }
+}

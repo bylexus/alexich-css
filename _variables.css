@@ -1,0 +1,6 @@
+:root {
+	--container-max-width: unset;
+    --spacing-base: 0.25rem;
+    --spacing-scale: 2;
+    --grid-gap: 8px;
+}

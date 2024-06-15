@@ -1,0 +1,70 @@
+.h-full {
+	height: 100%;
+}
+.w-full {
+	width: 100%;
+}
+
+.float-left {
+	float: left;
+}
+.float-right {
+	float: right;
+}
+
+.d-none {
+	display: none;
+}
+
+.d-block {
+	display: block;
+}
+
+.display {
+	display: initial;
+}
+
+/** Tablet: medium (md), > 480px, <= 768px **/
+@media screen and (min-width: 481px) {
+	.d-md-none {
+		display: none;
+	}
+
+	.d-md-block {
+		display: block;
+	}
+
+	.display-md {
+		display: initial;
+	}
+}
+
+/** Desktop: large (lg), > 768px, <= 1280px **/
+@media screen and (min-width: 769px) {
+	.d-lg-none {
+		display: none;
+	}
+
+	.d-lg-block {
+		display: block;
+	}
+
+	.display-lg {
+		display: initial;
+	}
+}
+
+/** Large Desktop, xlarge (xl), > 1280px **/
+@media screen and (min-width: 1281px) {
+	.d-xl-none {
+		display: none;
+	}
+
+	.d-xl-block {
+		display: block;
+	}
+
+	.display-xl {
+		display: initial;
+	}
+}

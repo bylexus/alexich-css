@@ -1,0 +1,26 @@
+/** Default: small (sm), Mobile, <= 480px **/
+:root {
+}
+
+/** Tablet: medium (md), > 480px, <= 768px **/
+@media screen and (min-width: 481px) {
+	:root {
+		--container-max-width: 960px;
+	}
+}
+
+/** Desktop: large (lg), > 768px, <= 1280px **/
+@media screen and (min-width: 769px) {
+	:root {
+		--container-max-width: 1024px;
+		--grid-gap: 12px;
+	}
+}
+
+/** Large Desktop, xlarge (xl), > 1280px **/
+@media screen and (min-width: 1281px) {
+	:root {
+		--container-max-width: 1280px;
+		--grid-gap: 16px;
+	}
+}
