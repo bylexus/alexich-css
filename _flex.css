@@ -55,6 +55,18 @@
   align-items: end;
 }
 
+.align-self-start {
+  align-self: start;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+.align-self-end {
+  align-self: end;
+}
+
 .justify-content-start {
   justify-content: start;
 }

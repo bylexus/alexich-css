@@ -1,77 +1,148 @@
 .h-full {
-	height: 100%;
+  height: 100%;
 }
 .w-full {
-	width: 100%;
+  width: 100%;
+}
+.h-initial {
+  height: initial !important;
+}
+.w-initial {
+  width: initial !important;
 }
 
 .overflow-hidden {
-	overflow: hidden;
+  overflow: hidden;
 }
 .overflow-auto {
-	overflow: auto;
-}
-
-.float-left {
-	float: left;
-}
-.float-right {
-	float: right;
+  overflow: auto;
 }
 
 .d-none {
-	display: none;
+  display: none !important;
 }
 
 .d-block {
-	display: block;
+  display: block !important;
+}
+.d-inline {
+  display: inline !important;
+}
+.d-inline-grid {
+  display: inline !important;
+}
+.d-inline-block {
+  display: inline-block !important;
 }
 
 .display {
-	display: initial;
+  display: initial !important;
 }
 
 /** Tablet: medium (md), > 480px, <= 768px **/
 @media screen and (min-width: 481px) {
-	.d-md-none {
-		display: none;
-	}
+  .h-md-full {
+    height: 100%;
+  }
+  .w-md-full {
+    width: 100%;
+  }
+  .h-md-initial {
+    height: initial !important;
+  }
+  .w-md-initial {
+    width: initial !important;
+  }
+  .d-md-none {
+    display: none !important;
+  }
 
-	.d-md-block {
-		display: block;
-	}
+  .d-md-block {
+    display: block !important;
+  }
+  .d-md-inline {
+    display: inline !important;
+  }
+  .d-md-inline-grid {
+    display: inline !important;
+  }
+  .d-md-inline-block {
+    display: inline-block !important;
+  }
 
-	.display-md {
-		display: initial;
-	}
+  .display-md {
+    display: initial !important;
+  }
 }
 
 /** Desktop: large (lg), > 768px, <= 1280px **/
 @media screen and (min-width: 769px) {
-	.d-lg-none {
-		display: none;
-	}
+  .h-lg-full {
+    height: 100%;
+  }
+  .w-lg-full {
+    width: 100%;
+  }
+  .h-lg-initial {
+    height: initial !important;
+  }
+  .w-lg-initial {
+    width: initial !important;
+  }
+  .d-lg-none {
+    display: none !important;
+  }
 
-	.d-lg-block {
-		display: block;
-	}
+  .d-lg-block {
+    display: block !important;
+  }
+  .d-lg-inline {
+    display: inline !important;
+  }
+  .d-lg-inline-grid {
+    display: inline-grid !important;
+  }
+  .d-lg-inline-block {
+    display: inline-block !important;
+  }
 
-	.display-lg {
-		display: initial;
-	}
+  .display-lg {
+    display: initial !important;
+  }
 }
 
 /** Large Desktop, xlarge (xl), > 1280px **/
 @media screen and (min-width: 1281px) {
-	.d-xl-none {
-		display: none;
-	}
+  .h-xl-full {
+    height: 100%;
+  }
+  .w-xl-full {
+    width: 100%;
+  }
+  .h-xl-initial {
+    height: initial !important;
+  }
+  .w-xl-initial {
+    width: initial !important;
+  }
+  .d-xl-none {
+    display: none !important;
+  }
 
-	.d-xl-block {
-		display: block;
-	}
+  .d-xl-block {
+    display: block !important;
+  }
+  .d-xl-inline {
+    display: inline !important;
+  }
+  .d-xl-inline-grid {
+    display: inline-grid !important;
+  }
+  .d-xl-inline-block {
+    display: inline-block !important;
+  }
 
-	.display-xl {
-		display: initial;
-	}
+  .display-xl {
+    display: initial !important;
+  }
 }

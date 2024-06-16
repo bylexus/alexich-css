@@ -8,9 +8,11 @@
 .sticky-top {
 	position: sticky;
 	top: 0;
+	align-self: start;
 }
 
 .sticky-bottom {
 	position: sticky;
 	bottom: 0;
+	align-self: end;
 }
