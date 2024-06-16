@@ -50,7 +50,9 @@ You can start right now by just including the main CSS directly in your HTML:
 </html>
 ```
 
-Check the  [full documentation](./doc/) for more details.
+### Next steps
+
+Check the  [full documentation](https://rawcdn.githack.com/bylexus/alexich-css/main/doc/index.html) for more details.
 
 
 (c) 2024 [alexi.ch](https://alexi.ch)
